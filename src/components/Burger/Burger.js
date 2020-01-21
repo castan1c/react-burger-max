@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { BurgerIngredient } from '../';
 
 const burger = (props) => {
@@ -16,7 +17,7 @@ const burger = (props) => {
   }
 
   return (
-    <div style={{height: '800px', textAlign: 'center'}}>
+    <div style={{ height: '400px', textAlign: 'center' }}>
       <BurgerIngredient type={'bread-top'}/>
       {ingredients}
       <BurgerIngredient type={'bread-bottom'}/>

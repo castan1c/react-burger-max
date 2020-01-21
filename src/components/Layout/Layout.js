@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { BurgerBuilder } from '../../containers'
+import { Toolbar } from '../';
 
 const layout = () => (
   <div>
-    <div>Header</div>
+    <Toolbar/>
     <BurgerBuilder/>
   </div>
 );
