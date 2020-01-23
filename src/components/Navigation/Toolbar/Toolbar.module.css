@@ -10,3 +10,29 @@
   background-color: rgb(138, 127, 110);
   z-index: 90;
 }
+
+.Toolbar nav {
+  height: 100%;
+}
+
+@media (max-width: 499px) {
+  .DesktopOnly {
+    display: none;
+  }
+}
+
+.Toolbar button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* width: 50px; */
+}
+
+.Toolbar button span {
+  display: flex;
+  padding: 0 20px;
+  /* align-items: center; */
+  /* margin: auto; */
+  
+  
+}

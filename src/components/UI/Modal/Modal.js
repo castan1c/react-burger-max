@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './Modal.module.css';
 import Backdrop from '../Backdrop/Backdrop';
 
-const Modal = (props) => {
+const Modal = React.memo(function Modal(props) {
 
   return (
     <>
@@ -16,6 +16,6 @@ const Modal = (props) => {
       </div>
     </>
   )
-}
+}, (prevProps, newProps) => newProps.visible === prevProps);
 
 export default Modal;

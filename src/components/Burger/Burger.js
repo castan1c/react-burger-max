@@ -12,7 +12,7 @@ const burger = (props) => {
     );
   });
 
-  if(!ingredientsCount) {
+  if (!ingredientsCount) {
     ingredients = <span>No ingredients</span>
   }
 

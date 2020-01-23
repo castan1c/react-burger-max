@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button} from '../../';
+import { Button } from '../../';
 
 const OrderSummary = (props) => {
   const ingredientSummary = Object.entries(props.ingredients);
@@ -11,7 +11,10 @@ const OrderSummary = (props) => {
       <span>A burger with the following ingredients: </span>
       <ul>
         {ingredientSummary.map(([ingredientName, ingredientQty]) =>
-          <li key={ingredientName}><span>{ingredientName}: {ingredientQty}</span></li>)}
+          <li key={ingredientName}>
+            <span>{ingredientName}: {ingredientQty}</span>
+          </li>
+        )}
       </ul>
       <strong>Full price: {props.price.toFixed(2)} $</strong>
       <div>

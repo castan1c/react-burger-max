@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { BurgerBuilder } from '../../containers'
-import { Toolbar } from '../';
+import { Toolbar, SideDrawer } from '../';
 
-const layout = () => (
-  <div>
-    <Toolbar/>
-    <BurgerBuilder/>
-  </div>
-);
+const Layout = (props) => {
+  const [sideDrawerShowed, setsideDrawerShowed] = useState(false);
+
+  return (
+    <div>
+      <Toolbar menuClicked={() => setsideDrawerShowed(true)}/>
+      <BurgerBuilder/>
+      <SideDrawer
+        isOpened={sideDrawerShowed}
+        closeHandler={() => setsideDrawerShowed(false)}
+      />
+    </div>
+  )
+}
 
 
 
-export default layout;
+export default Layout;

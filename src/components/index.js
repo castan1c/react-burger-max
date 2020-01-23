@@ -6,6 +6,8 @@ import Modal from './UI/Modal/Modal';
 import Button from './UI/Button/Button';
 import Toolbar from './Navigation/Toolbar/Toolbar';
 import Logo from './Logo/Logo';
+import NavigationItems from './Navigation/NavigationItems/NavigationItems';
+import SideDrawer from './Navigation/SideDrawer/SideDrawer';
 
 export {
   Layout,
@@ -16,4 +18,6 @@ export {
   Button,
   Toolbar,
   Logo,
+  NavigationItems,
+  SideDrawer
 };
