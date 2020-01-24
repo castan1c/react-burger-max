@@ -5,17 +5,10 @@ import classes from './BuildControls.module.css';
 
 import BuildControl from './BuildControl/BuildControl';
 
-const controls = [
-  { label: 'Salad', type: 'salad' },
-  { label: 'Cheese', type: 'cheese' },
-  { label: 'Meat', type: 'meat' },
-  { label: 'Bacon', type: 'bacon' }
-];
-
 const BuildControls = (props) => {
   return (
-    <div>
-      {controls.map(control =>
+    <div className={classes.BuildControls}>
+      {props.controls.map(control =>
         <BuildControl
           label={control.label}
           key={control.label}
@@ -24,7 +17,7 @@ const BuildControls = (props) => {
           disabled={props.disabled[control.type]}
         />
       )}
-      <button onClick={props.orderHandler} disabled={props.orderDisabled}>
+      <button className={classes.OrderButton}  onClick={props.orderHandler} disabled={props.orderDisabled}>
         Order now
       </button>
     </div>
